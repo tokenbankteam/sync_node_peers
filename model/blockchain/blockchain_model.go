@@ -14,9 +14,8 @@ type Model struct {
 }
 
 const (
-	methodGetBlockByNumber = "mc_getBlockByNumber"
-	methodAdminPeers       = "admin_peers"
-	methodAddAdminPeer     = "admin_addPeer"
+	methodAdminPeers   = "admin_peers"
+	methodAddAdminPeer = "admin_addPeer"
 )
 
 var timeoutDuration = time.Second * 10

@@ -30,7 +30,7 @@ func (s *BlockChainCheckTask) Start() {
 	go func() {
 		for {
 			s.doCheck()
-			time.Sleep(time.Minute * 1)
+			time.Sleep(time.Minute * 5)
 		}
 	}()
 }
@@ -45,7 +45,7 @@ func (s *BlockChainCheckTask) doCheck() {
 			continue
 		}
 		peerList := result.Result
-		if peerList == nil || len(peerList) == 0 {
+		if peerList == nil || len(peerList) < 2 {
 			s.sendSyncPeerEmail(nodeAddr, len(peerList))
 		}
 		for _, peer := range peerList {
