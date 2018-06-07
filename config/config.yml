@@ -16,5 +16,4 @@ addr: 0.0.0.0:8086
 logger: config/logger.xml
 
 # EtherNodeAddrs 192.168.1.100:8545,10.0.0.1:8545
-#ethernodeaddrs: ['http://172.31.233.75:8545']
-ethernodeaddrs: ['https://chain3.mytokenpocket.vip']
+ethernodeaddrs: ['http://172.31.233.75:8545']
